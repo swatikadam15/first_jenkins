@@ -10,7 +10,9 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/your-repo/project.git'
+            git branch: 'main',
+            url: 'https://github.com/swatikadam15/first_jenkins/main',
+            credentialsId: 'github-token'
             }
         }
 
