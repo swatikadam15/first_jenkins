@@ -21,12 +21,10 @@
 # COPY --from=build /app/hello.jar .
 
 # IMPORTANT: only JAR name, no "java"
-CMD ["hello.jar"]
-
-FROM eclipse-temurin:17-jdk-jammy 
+FROM eclipse-temurin:17-jdk-jammy
 WORKDIR /app
+COPY target/*.jar app.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","app.jar"]
 
-COPY HelloWorld.java .
-EXPOSE 8081
-CMD ["java","-jar","app.jar"]
 
