@@ -11,7 +11,7 @@ public class DemoApplication {
 
     @GetMapping("/")
     public String hello() {
-        return "Hello from Jenkins + Docker + Spring Boot 🚀";
+        return "Hello from Jenkins + Docker + Spring Boot swati🚀";
     }
 
     public static void main(String[] args) {
